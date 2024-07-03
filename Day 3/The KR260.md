@@ -4,8 +4,8 @@
 - [Robotic Arm](#robotic-arm)
 <br>
 # Pacman
-::github{repo="MakarenaLabs/pacman-KR260"}
+[Source](https://github.com/MakarenaLabs/pacman-KR260)
 # Atrover
-::github{repo="dramoz/kv260-atrover"}
+[Source](https://github.com/dramoz/kv260-atrover)
 # Robotic Arm
-::github{repo="shilicon/kr260_robotic_arm"}
+[Source](https://github.com/shilicon/kr260_robotic_arm)

@@ -30,7 +30,7 @@ This is a basic project to get you started in the ZYNQ workflow which involves c
 	```
 	
 2. Connect the LEDs to the PMODs. Follow this schematic
-		![[LED Blinking Schematic.png]]
+		![LED Blinking Schematic](</assets/LED Blinking Schematic.png>]
 
 3. Clone this repo to use a precompiled bitstream
 	 ```sh
@@ -68,10 +68,10 @@ This is a basic project to get you started in the ZYNQ workflow which involves c
 ## YOLO Project
 ## Pose Detection
 **Detailed guide at [Hackster](https://www.hackster.io/Parimala6/eye-state-detection-model-implementation-on-kria-3415a3)**
-::github{repo="PeterQuinn396/KV260-Pose-Commands"}
+[Source](https://github.com/PeterQuinn396/KV260-Pose-Commands)
 
 ## Eye state Detection
 **Detailed guide at [Hackster](https://www.hackster.io/Parimala6/eye-state-detection-model-implementation-on-kria-3415a3)**
-::github{repo="Parimala6/Vitis-AI_based_binary_classification"}
+[Source](https://github.com/Parimala6/Vitis-AI_based_binary_classification)
 
 
