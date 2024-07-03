@@ -10,7 +10,7 @@
 	- [Pose Detection](#pose-detection)
 	- [Eye state Detection](#eye-state-detection)
 # Booting Up Linux
-Follow this docs to boot linux into your boards :- [Kria starter kit linux boot](https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/kria_starterkit_linux_boot.html)
+Follow this docs to boot Ubuntu into your boards :- [Kria starter kit linux boot](https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/kria_starterkit_linux_boot.html)
 
 # Projects
 ## LED Blinking Project
@@ -49,10 +49,8 @@ This is a basic project to get you started in the ZYNQ workflow which involves c
 	This should open a jupyterlab portal. Enter the following password
 	> xilinx 
 	
-6. Add the files from the cloned directory to the Jupyterlab environment and run the code in the ipnyb file
-
+6. Add the files from the cloned directory to the Jupyterlab environment and run the code in the ipnyb file<br>
 [Source](https://rabish.medium.com/blinking-a-led-with-pynq-in-kria-kv260-kr260-dc17f334bc2a)
-
 ## SmartCam
 [Source](https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/smartcamera/docs/app_deployment.html)
 
@@ -61,7 +59,6 @@ This is a basic project to get you started in the ZYNQ workflow which involves c
 
 ## FIR 
 [Source](https://www.hackster.io/michi_michi/fpga-fir-filter-hls-kria-kv260-pynq-2eec35)
-
 
 # Advanced Projects
 
