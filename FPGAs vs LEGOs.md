@@ -1,12 +1,3 @@
----
-title: FGPAs vs LEGOs
-published: 2024-07-28
-tags:
-  - FPGA
-category: Guides
-draft: true
-description: Graduating from LEGOs to FPGAs
----
 # Table of Content
 1. [Introduction](#introduction)
 2. [Tool Flows](#tool-flows)
@@ -85,5 +76,4 @@ Now let's talk about how we assemble these LUTs. Unlike a the physical bricks of
 The recommended programming flows for PYNQ are:
 1. Using Jupyter notebooks and Python code to load overlays and interact with the hardware
 2. Using Vivado to generate the hardware platform and Vitis to build the application, following examples like [PYNQ-HelloWorld](https://github.com/Xilinx/PYNQ-HelloWorld)
-	::github{repo="Xilinx/PYNQ-HelloWorld"}
 
