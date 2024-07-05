@@ -99,9 +99,9 @@ void fir(const float input[], float output[]){
 }
 ```
 
-<p>In the post-synthesis report, we see a rather large overhead because even though the loop is pipelined, it takes 1345 cycles to filter a signal of length 1024. This is due to the expensive floating point operations.</p>
+In the post-synthesis report, we see a rather large overhead because even though the loop is pipelined, it takes 1345 cycles to filter a signal of length 1024. This is due to the expensive floating point operations.<br>
 ![FIR res1](../assets/fir_res1.avif)
-<p>To avoid floating point operation the [fixed point package from Vitis HLS](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/C-Arbitrary-Precision-Fixed-Point-Types-Reference-Information) can be used. In order not to work with fixed point in Python (for communication with Pynq), the input and output of the function is still in float. Input and output must be typecast accordingly. In this project a word width of 32 bits and an integer width of 1 bit is used.</p>
+<br>To avoid floating point operation the [fixed point package from Vitis HLS](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/C-Arbitrary-Precision-Fixed-Point-Types-Reference-Information) can be used. In order not to work with fixed point in Python (for communication with Pynq), the input and output of the function is still in float. Input and output must be typecast accordingly. In this project a word width of 32 bits and an integer width of 1 bit is used.
 
 ```cpp
 void fir_fixed(const float input[], float output[]){
