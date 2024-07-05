@@ -14,7 +14,7 @@ Follow this docs to boot Ubuntu into your boards :- [Kria starter kit linux boot
 
 # Projects
 ## LED Blinking Project
-This is a basic project to get you started in the ZYNQ workflow which involves creating a bitstream (a file which dictates the logic configurations in the FPGA fabric) using Vivado and using jupyter lab to interact with this PL using a PS. 
+This is a basic hello world project to get you started in the ZYNQ workflow which involves creating a bitstream (a file which dictates the logic configurations in the FPGA fabric) using Vivado and using jupyter lab to interact with this PL using a PS. 
 #### Procedure
 1. If PYNQ is not setup on the board, clone the Kria-PYNQ repo and run the install script in the directory. It is expected to take 30 minutes for all the installation to finish.
 	```sh
@@ -54,16 +54,19 @@ This is a basic project to get you started in the ZYNQ workflow which involves c
 [Source](https://rabish.medium.com/blinking-a-led-with-pynq-in-kria-kv260-kr260-dc17f334bc2a)
 
 ## FIR Filter
+This code has x for an input and is generating a output from that for a low pass filter, it even shows how fast the code is executed by the CPU and how fast the fpga does it. It is also showing that graphically and with the difference between the two. it shows the impulse response and the LPF that it is emulating
 [Detailed Explanation Here](<./FIR Filter.md>)
-## SmartCam
+
+## SmartCam *
+This is an built in app that uses either a webcam or the cam that is attached to MIPI slot and can detect faces and draws a blue boundary around it.
 [Source](https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/smartcamera/docs/app_deployment.html)
 
-## NLP & SmartVision
+## NLP & SmartVision *
+This is an built in app that displays what the webcam can see and bounds box to everything it makes out it recognizes voice commands and even reacts to certain key pharses like yes no on off.
 [Source](https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/nlp-smartvision/docs/app_deployment_nlp.html)
 
-## FIR 
-[Source](https://www.hackster.io/michi_michi/fpga-fir-filter-hls-kria-kv260-pynq-2eec35)
-
+#### Note:
+\* The Prebuilt apps can be modified according to our needs by following the above linked documentations 
 # Advanced Projects
 
 ## YOLO Project
@@ -75,5 +78,3 @@ Detailed guide at [Hackster](https://www.hackster.io/hdcoe/running-yolov2-tiny-o
 ## Eye state Detection
 **Detailed guide at [Hackster](https://www.hackster.io/Parimala6/eye-state-detection-model-implementation-on-kria-3415a3)**
 [Source](https://github.com/Parimala6/Vitis-AI_based_binary_classification)
-
-
