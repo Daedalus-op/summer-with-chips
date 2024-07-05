@@ -13,16 +13,16 @@ All data and pre-built hardware are in the attached [GitHub repository](https://
 
 ### Fundamentals
 
-In digital signal processing a Finite Impulse Response (FIR) Filter has a finite response to any given finite input signal. A FIR filter is constructed with a tapped delay line for delaying the input signal by a given number of taps (_N_). The z^{-1} is the delay operator from the [Z-Transformation](https://en.wikipedia.org/wiki/Z-transform)
-
+In digital signal processing a Finite Impulse Response (FIR) Filter has a finite response to any given finite input signal. A FIR filter is constructed with a tapped delay line for delaying the input signal by a given number of taps (_N_). The $z^{-1}$ is the delay operator from the [Z-Transformation](https://en.wikipedia.org/wiki/Z-transform)
+![FIR ref1](../assets/fir_ref1.avif)
 The filter coefficients can be arranged in a impulse response vector.
-
+![FIR ref2](../assets/fir_ref2.avif)
 The output signal can be computed with
-
+![FIR ref3](../assets/fir_ref3.avif)
 or short
-
+![FIR ref4](../assets/fir_ref4.avif)
 Which is the same as the convolution of the input signal with the impulse response
-
+![FIR ref5](../assets/fir_ref5.avif)
 For the filter design the [Scipy Cookbook about the lowpass FIR-filter design with python](https://scipy-cookbook.readthedocs.io/items/FIRFilter.html) was used.
 
 The filter has been designed with a kaiser window with following properties:
@@ -43,7 +43,7 @@ Frequency Response:
 ![FIR req 2](../assets/fir_req2.avif)
 
 Filtered Signal:
-![FIR req3](fir_req3.avif)
+![FIR req3](../assets/fir_req3.avif)
 
 The final plots shows the original signal (thin blue line), the filtered signal (shifted by the appropriate phase delay to align with the original signal; thin red line), and the "good" part of the filtered signal (heavy green line). The "good part" is the part of the signal that is not affected by the initial conditions.
 

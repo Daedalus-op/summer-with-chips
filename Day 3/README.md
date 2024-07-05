@@ -6,7 +6,7 @@
 
 # Reference Links
 
-**Guides**
+#### Guides
 - Youtube
 	- [An Introduction to FPGAs: Architecture, Programmability and Advantageous - YouTube](https://www.youtube.com/watch?v=ahws--oNpBc&list=PLXHMvqUANAFOviU0J8HSp0E91lLJInzX1&index=3)
 	- [Vitis AI (1.4) Pytorch on Kria - YouTube](https://www.youtube.com/watch?v=Ktd-srFyJqE)
@@ -23,7 +23,8 @@
 - Element 14
 	- [AMD Xilinx Kria KV260 Vision AI Starter Kit : License plate detection using TensorFlow - element14 Community](https://community.element14.com/products/roadtest/b/blog/posts/amd-xilinx-kria-kv260-vision-ai-starter-kit-number-plate-detection)
 	- [AMD Xilinx Kria KV260 Vision AI Starter Kit : Using VITIS-AI - element14 Community](https://community.element14.com/products/roadtest/b/blog/posts/amd-xilinx-kria-kv260-vision-ai-starter-kit-software)
-**Projects**
+	
+#### Projects
 - [Vitis-AI-Tutorials/Tutorials/kv260_lidar_cam_fusion at 2.0 · Xilinx/Vitis-AI-Tutorials](https://github.com/Xilinx/Vitis-AI-Tutorials/tree/2.0/Tutorials/kv260_lidar_cam_fusion/) 
 - [Vitis Custom Embedded Platform Creation Example on KV260 — Vitis™ Tutorials 2022.1 documentation](https://xilinx.github.io/Vitis-Tutorials/2022-1/build/html/docs/Vitis_Platform_Creation/Design_Tutorials/01-Edge-KV260/README.html)
 - [Lidar- Cam fusion of KV260](https://github.com/Xilinx/Vitis-AI-Tutorials/tree/2.0/Tutorials/kv260_lidar_cam_fusion/)

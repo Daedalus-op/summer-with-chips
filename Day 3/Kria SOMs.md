@@ -42,13 +42,13 @@ Designed to work with the Robot Operating System (ROS)
 
 ## Comparison to Other Boards
 
-| Boards                    | KV260                                                      | KR260                                                                                        | PYNQ-Z2                                            | ZCU104                                                         |
-| ------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------- |
-| Built-in Camera interface | 3 MIPI camera interfaces, USB 3.0 ports                    | SLVS-EC camera interface, USB 3.0 ports                                                      | USB 3.0 (PS Only pipeline)                         | USB 3.0 (PS Only pipeline)                                     |
-| Networking                | 1 Gigabit Ethernet port                                    | 4 RJ45 Gigabit Ethernet ports and 1 SFP+ 10 Gigabit Ethernet port for high-speed vision data | 1 Gigabit Ethernet and wireless connectivity       | high-speed 10GbE interface and USB-based Ethernet connectivity |
-| Video Output              | Both HDMI and DisplayPort outputs                          | 1 DisplayPort 1.2a output                                                                    | HDMI-In block, a HDMI-Out block, and a Video DMA   | Support full 4K video output                                   |
-| Expansion Headers         | Raspberry Pi, Pmod high-speed serial and memory interfaces | 4 Pmod connectors and a Raspberry Pi HAT header for expansion                                | Arduino, Pmod, and Raspberry Pi compatible headers | high-speed FMC, Pmod, and DDR4 SODIMM connectors               |
-| Target Applications       | Vision Applications                                        | Robotics applications with multiple data sources                                             | Prototyping and proof-of-concept development       | High speed networking application like data processing and 5g  |
+| Boards                        | KV260                                                      | KR260                                                                                        | PYNQ-Z2                                            | ZCU104                                                         |
+| ----------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------- | -------------------------------------------------------------- |
+| **Built-in Camera interface** | 3 MIPI camera interfaces, USB 3.0 ports                    | SLVS-EC camera interface, USB 3.0 ports                                                      | USB 3.0 (PS Only pipeline)                         | USB 3.0 (PS Only pipeline)                                     |
+| **Networking**                | 1 Gigabit Ethernet port                                    | 4 RJ45 Gigabit Ethernet ports and 1 SFP+ 10 Gigabit Ethernet port for high-speed vision data | 1 Gigabit Ethernet and wireless connectivity       | high-speed 10GbE interface and USB-based Ethernet connectivity |
+| **Video Output**              | Both HDMI and DisplayPort outputs                          | 1 DisplayPort 1.2a output                                                                    | HDMI-In block, a HDMI-Out block, and a Video DMA   | Support full 4K video output                                   |
+| **Expansion Headers**         | Raspberry Pi, Pmod high-speed serial and memory interfaces | 4 Pmod connectors and a Raspberry Pi HAT header for expansion                                | Arduino, Pmod, and Raspberry Pi compatible headers | high-speed FMC, Pmod, and DDR4 SODIMM connectors               |
+| **Target Applications**       | Vision Applications                                        | Robotics applications with multiple data sources                                             | Prototyping and proof-of-concept development       | High speed networking application like data processing and 5g  |
 
 <p><b>
 In summary, the KR260 has more networking ports, camera interfaces, and expansion options tailored for robotics, while the KV260 has a simpler design focused on vision AI with more video output options. The choice depends on the specific requirements of the application.</b></p>
@@ -58,10 +58,10 @@ In summary, the KR260 has more networking ports, camera interfaces, and expansio
 # Links
 - [SOM Landing Page](https://xilinx.github.io/kria-apps-docs/home/build/html/index.html)
 - [Tool Flow Overview](https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/building_the_design.html)
-#### Kria KV260 
+#### [Kria KV260](<The KV260.md>)
 - [Kria KV260 Vision AI Starter Kit](https://www.amd.com/en/products/system-on-modules/kria/k26/kv260-vision-starter-kit.html)
 - [Kria KV260 Vision AI review](https://community.element14.com/technologies/fpga-group/b/blog/posts/kria-kv260-vision-ai-review)
 - [AMD-Xilinx Kria KV260 Starter Kit: Exploring Machine Vision AI](https://hothardware.com/reviews/xilinx-kria-kv260-vision-ai-starter-kit-review)
-#### Kria KR260
+#### [Kria KR260](<The KR260.md>)
 - [Accelerate Your Robotics Design with the Kria KR260 Robotics Starter Kit](https://www.hackster.io/news/accelerate-your-robotics-design-with-the-kria-kr260-robotics-starter-kit-89191a42080d)
 - [Kria KR260 Robotics Starter Kit](https://www.amd.com/en/products/system-on-modules/kria/k26/kr260-robotics-starter-kit.html)

@@ -79,4 +79,4 @@ Detailed guide at [Hackster](https://www.hackster.io/hdcoe/running-yolov2-tiny-o
 [Source](https://github.com/Parimala6/Vitis-AI_based_binary_classification)
 
 #### Note:
-\** Are not implemented in the current board
+\** Are not implemented yet in the current board
