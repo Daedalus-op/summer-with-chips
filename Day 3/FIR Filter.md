@@ -30,20 +30,20 @@ The filter has been designed with a kaiser window with following properties:
 - Cutoff-frequency (_f_c_) of 10 Hz
 - Transition width (_∆f_) of 5 Hz
 - Stopband ripple (A_stop) of 60 dB
-![[fir_diag1.avif]]
+![FIR Reference](../assets/fir_diag1.avif)
 
 Filter design with Kaiser window. Own presentment, inspired by title={Introduction to signal processing}, publisher={Prentice Hall}, author={Orfanidis, Sophocles J.}, year={1998}
 
 The cookbook has been adapted for this project in [fir.py](https://github.com/Nunigan/FIR-FIlter_HLS/blob/main/src/fir.py)
 
 Coefficients:
-![[fir_req1.avif]]
+![FIR req1](../assets/fir_req1.avif)
 
 Frequency Response:
-![[fir_req2.avif]]
+![FIR req 2](../assets/fir_req2.avif)
 
 Filtered Signal:
-![[fir_req3.avif]]
+![FIR req3](fir_req3.avif)
 
 The final plots shows the original signal (thin blue line), the filtered signal (shifted by the appropriate phase delay to align with the original signal; thin red line), and the "good" part of the filtered signal (heavy green line). The "good part" is the part of the signal that is not affected by the initial conditions.
 
@@ -100,7 +100,7 @@ void fir(const float input[], float output[]){
 ```
 
 In the post-synthesis report, we see a rather large overhead because even though the loop is pipelined, it takes 1345 cycles to filter a signal of length 1024. This is due to the expensive floating point operations.
-![[fir_res1.avif]]
+![FIR res1](../assets/fir_res1.avif)
 To avoid floating point operation the [fixed point package from Vitis HLS](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/C-Arbitrary-Precision-Fixed-Point-Types-Reference-Information) can be used. In order not to work with fixed point in Python (for communication with Pynq), the input and output of the function is still in float. Input and output must be typecast accordingly. In this project a word width of 32 bits and an integer width of 1 bit is used.
 
 ```cpp
@@ -131,7 +131,7 @@ void fir_fixed(const float input[], float output[]){
 
 As one in the report can see, the overhead is nearly gone and with 1058 cycles really close the the optimal Latency of 1024 cycles.
 
-![[fir_res2.avif]]
+![FIR res2](../assets/fir_res2.avif)
 
 ### Vitis HLS & Vivado
 
