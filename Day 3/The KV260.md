@@ -30,18 +30,17 @@ This is a basic hello world project to get you started in the ZYNQ workflow whic
 	```
 	
 2. Connect the LEDs to the PMODs. Follow this schematic
-		![LED Blinking Schematic](</assets/LED Blinking Schematic.png>]
-		
-1. Clone this repo to use a precompiled bitstream
+![Schematic](../assets/LED_Blinking_Schematic.png)	
+3. Clone this repo to use a precompiled bitstream
 	 ```sh
 	git clone https://github.com/rajivbishwokarma/kv260_led_blink
 	cd kv260_led_blink && ls
 	```
 	
 4. As you can see, there are 3 files in this repo
-	- .bit - 
-	- .tcl - 
-	- .hwh - 
+	- .bit - Vivado generates this by synthesizing and implementing the HDL code. In the most basic form, a bitstream (.bit) file tells the FPGA how to configure its internal logic and interconnects to implement the given hardware design.
+	- .tcl - The tcl file sets up the configuration environment for the FPGA. It provides information about the FPGA, including memory map, I/O pins, clocking and any other hardware-specific details.
+	- .hwh - This is a hardware handoff file with information on hardware design, including address map, memory locations and so on. This file is used by PYNQ to verify that the FPGA is properly configured to access resources.
 
 5. Connect to same network as the one the board is connected to. And open
 	> kria:9090/lab
@@ -67,7 +66,7 @@ This is an built in app that displays what the webcam can see and bounds box to 
 
 #### Note:
 \* The Prebuilt apps can be modified according to our needs by following the above linked documentations 
-# Advanced Projects
+# Advanced Projects \**
 
 ## YOLO Project
 Detailed guide at [Hackster](https://www.hackster.io/hdcoe/running-yolov2-tiny-on-kv260-28f801)
@@ -78,3 +77,6 @@ Detailed guide at [Hackster](https://www.hackster.io/hdcoe/running-yolov2-tiny-o
 ## Eye state Detection
 **Detailed guide at [Hackster](https://www.hackster.io/Parimala6/eye-state-detection-model-implementation-on-kria-3415a3)**
 [Source](https://github.com/Parimala6/Vitis-AI_based_binary_classification)
+
+#### Note:
+\** Are not implemented in the current board

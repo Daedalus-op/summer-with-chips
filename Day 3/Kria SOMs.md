@@ -6,7 +6,7 @@ The Kria KV260 Vision AI Starter Kit is a development board designed for acceler
 </p>
 
 ### Specifications
-- Kria K26 SoM with quad-core Arm Cortex-A53 CPU and Xilinx FPGA
+- Kria K26 SoM with quad-core Arm Cortex-A53 CPU and Xilinx Zynq Ultrascale + MPSoC FPGA
 - 4 GB DDR4 memory
 - 1 Gb Ethernet
 - USB 3.0 and USB 2.0 ports
@@ -28,6 +28,7 @@ The KV260 is well-suited for a variety of machine vision applications including:
 ## Kria KR260
 The KR260 is a variant of the KV260 optimized for robotics applications
 ### Specifications
+- Kria K26 SoM with quad-core Arm Cortex-A53 CPU and Xilinx Zynq Ultrascale + MPSoC FPGA
 - 4 RJ45 Gigabit Ethernet ports for real-time networking
 - 1 SFP+ 10 Gigabit Ethernet port for high-speed vision data
 - 4 USB 3.0 ports for connecting cameras
