@@ -53,7 +53,7 @@ This is a basic hello world project to get you started in the ZYNQ workflow whic
 [Source](https://rabish.medium.com/blinking-a-led-with-pynq-in-kria-kv260-kr260-dc17f334bc2a)
 
 ## FIR Filter
-This code has x for an input and is generating a output from that for a low pass filter, it even shows how fast the code is executed by the CPU and how fast the fpga does it. It is also showing that graphically and with the difference between the two. it shows the impulse response and the LPF that it is emulating
+This code has x for an input and is generating a output from that for a low pass filter, it even shows how fast the code is executed by the CPU and how fast the fpga does it. It is also showing that graphically and with the difference between the two. It shows the impulse response and the LPF that it is emulating
 [Detailed Explanation Here](<./FIR Filter.md>)
 
 ## SmartCam *

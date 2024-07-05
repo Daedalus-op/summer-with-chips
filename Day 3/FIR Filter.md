@@ -13,15 +13,15 @@ All data and pre-built hardware are in the attached [GitHub repository](https://
 
 ### Fundamentals
 
-In digital signal processing a Finite Impulse Response (FIR) Filter has a finite response to any given finite input signal. A FIR filter is constructed with a tapped delay line for delaying the input signal by a given number of taps (_N_). The $z^{-1}$ is the delay operator from the [Z-Transformation](https://en.wikipedia.org/wiki/Z-transform)
+In digital signal processing a Finite Impulse Response (FIR) Filter has a finite response to any given finite input signal. A FIR filter is constructed with a tapped delay line for delaying the input signal by a given number of taps (_N_). The $z^{-1}$ is the delay operator from the [Z-Transformation](https://en.wikipedia.org/wiki/Z-transform)<br>
 ![FIR ref1](../assets/fir_ref1.avif)
-The filter coefficients can be arranged in a impulse response vector.
+<br>The filter coefficients can be arranged in a impulse response vector.<br>
 ![FIR ref2](../assets/fir_ref2.avif)
-The output signal can be computed with
+<br>The output signal can be computed with<br>
 ![FIR ref3](../assets/fir_ref3.avif)
-or short
+<br>or short<br>
 ![FIR ref4](../assets/fir_ref4.avif)
-Which is the same as the convolution of the input signal with the impulse response
+<br>Which is the same as the convolution of the input signal with the impulse response<br>
 ![FIR ref5](../assets/fir_ref5.avif)
 For the filter design the [Scipy Cookbook about the lowpass FIR-filter design with python](https://scipy-cookbook.readthedocs.io/items/FIRFilter.html) was used.
 
@@ -32,20 +32,20 @@ The filter has been designed with a kaiser window with following properties:
 - Stopband ripple (A_stop) of 60 dB
 ![FIR Reference](../assets/fir_diag1.avif)
 
-Filter design with Kaiser window. Own presentment, inspired by title={Introduction to signal processing}, publisher={Prentice Hall}, author={Orfanidis, Sophocles J.}, year={1998}
+> Filter design with Kaiser window. Own presentment, inspired by title={Introduction to signal processing}, publisher={Prentice Hall}, author={Orfanidis, Sophocles J.}, year={1998}
 
 The cookbook has been adapted for this project in [fir.py](https://github.com/Nunigan/FIR-FIlter_HLS/blob/main/src/fir.py)
 
-Coefficients:
+<br>Coefficients: <br>
 ![FIR req1](../assets/fir_req1.avif)
 
-Frequency Response:
+<br>Frequency Response: <br>
 ![FIR req 2](../assets/fir_req2.avif)
 
-Filtered Signal:
+<br>Filtered Signal:<br>
 ![FIR req3](../assets/fir_req3.avif)
 
-The final plots shows the original signal (thin blue line), the filtered signal (shifted by the appropriate phase delay to align with the original signal; thin red line), and the "good" part of the filtered signal (heavy green line). The "good part" is the part of the signal that is not affected by the initial conditions.
+<p>The final plots shows the original signal (thin blue line), the filtered signal (shifted by the appropriate phase delay to align with the original signal; thin red line), and the "good" part of the filtered signal (heavy green line). The "good part" is the part of the signal that is not affected by the initial conditions.</p>
 
 In the cookbook the scipy function `scipy.signal.lfilter()` is used for filtering a singal. A pure and non optimized python (with NumPy) implementation would look like:
 ```python
@@ -99,9 +99,9 @@ void fir(const float input[], float output[]){
 }
 ```
 
-In the post-synthesis report, we see a rather large overhead because even though the loop is pipelined, it takes 1345 cycles to filter a signal of length 1024. This is due to the expensive floating point operations.
+<p>In the post-synthesis report, we see a rather large overhead because even though the loop is pipelined, it takes 1345 cycles to filter a signal of length 1024. This is due to the expensive floating point operations.</p>
 ![FIR res1](../assets/fir_res1.avif)
-To avoid floating point operation the [fixed point package from Vitis HLS](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/C-Arbitrary-Precision-Fixed-Point-Types-Reference-Information) can be used. In order not to work with fixed point in Python (for communication with Pynq), the input and output of the function is still in float. Input and output must be typecast accordingly. In this project a word width of 32 bits and an integer width of 1 bit is used.
+<p>To avoid floating point operation the [fixed point package from Vitis HLS](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/C-Arbitrary-Precision-Fixed-Point-Types-Reference-Information) can be used. In order not to work with fixed point in Python (for communication with Pynq), the input and output of the function is still in float. Input and output must be typecast accordingly. In this project a word width of 32 bits and an integer width of 1 bit is used.</p>
 
 ```cpp
 void fir_fixed(const float input[], float output[]){
@@ -129,7 +129,7 @@ void fir_fixed(const float input[], float output[]){
 }
 ```
 
-As one in the report can see, the overhead is nearly gone and with 1058 cycles really close the the optimal Latency of 1024 cycles.
+As one in the report can see, the overhead is nearly gone and with 1058 cycles really close the the optimal Latency of 1024 cycles.<br>
 
 ![FIR res2](../assets/fir_res2.avif)
 
