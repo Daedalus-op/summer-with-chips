@@ -7,7 +7,7 @@ With the [Vitis High-Level Synthesis (HLS)](https://docs.xilinx.com/r/en-US/ug13
 
 In this project it will be shown how to accelerate a FIR filter on a FPGA using HLS.
 
-In a previous [blog post](https://www.hackster.io/michi_michi/fpga-deep-learning-inference-hls-kria-kv260-pynq-b0c510) about running a simple Neural Network with HLS, the setup procedure for the KV260 with Pynq has been shown.
+In a [blog post](https://www.hackster.io/michi_michi/fpga-deep-learning-inference-hls-kria-kv260-pynq-b0c510) about running a simple Neural Network with HLS, the setup procedure for the KV260 with Pynq has been shown.
 
 All data and pre-built hardware are in the attached [GitHub repository](https://github.com/Nunigan/FIR-FIlter_HLS)
 
