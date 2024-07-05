@@ -31,8 +31,8 @@ This is a basic project to get you started in the ZYNQ workflow which involves c
 	
 2. Connect the LEDs to the PMODs. Follow this schematic
 		![LED Blinking Schematic](</assets/LED Blinking Schematic.png>]
-
-3. Clone this repo to use a precompiled bitstream
+		
+1. Clone this repo to use a precompiled bitstream
 	 ```sh
 	git clone https://github.com/rajivbishwokarma/kv260_led_blink
 	cd kv260_led_blink && ls
@@ -49,8 +49,12 @@ This is a basic project to get you started in the ZYNQ workflow which involves c
 	This should open a jupyterlab portal. Enter the following password
 	> xilinx 
 	
-6. Add the files from the cloned directory to the Jupyterlab environment and run the code in the ipnyb file<br>
+6. Add the files from the cloned directory to the Jupyterlab environment and run the code in the ipnyb file.
+
 [Source](https://rabish.medium.com/blinking-a-led-with-pynq-in-kria-kv260-kr260-dc17f334bc2a)
+
+## FIR Filter
+[Detailed Explanation Here](<./FIR Filter.md>)
 ## SmartCam
 [Source](https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/smartcamera/docs/app_deployment.html)
 
@@ -63,6 +67,7 @@ This is a basic project to get you started in the ZYNQ workflow which involves c
 # Advanced Projects
 
 ## YOLO Project
+Detailed guide at [Hackster](https://www.hackster.io/hdcoe/running-yolov2-tiny-on-kv260-28f801)
 ## Pose Detection
 **Detailed guide at [Hackster](https://www.hackster.io/Parimala6/eye-state-detection-model-implementation-on-kria-3415a3)**
 [Source](https://github.com/PeterQuinn396/KV260-Pose-Commands)
