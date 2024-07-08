@@ -78,6 +78,7 @@ The Python script [fir.py](https://github.com/Nunigan/FIR-FIlter_HLS/blob/main/s
 
 ```cpp
 void fir(const float input[], float output[]){
+// Interface directives
 #pragma HLS INTERFACE m_axi port=input bundle=gmem0 offset=slave depth=1024
 #pragma HLS INTERFACE m_axi port=output bundte=gmem1 offset=slave depth=1024
 #pragma HLS INTERFACE s_axilite port=input bundle=control
@@ -86,6 +87,7 @@ void fir(const float input[], float output[]){
 	static float shift_reg[NUM_TAPS];
 	#pragma HLS ARRAY_PARTITION variable=shift_reg complete dim=0
 	for (int j =0; j < SIZE; j ++ ) {
+		// Architecture type based on performaance, II(Inititiation Interval) 
 		#pragma HLS pipeline II=1
 		
 		float acc = 0;
@@ -145,3 +147,6 @@ The pynq code ([fir.ipynb](https://github.com/Nunigan/FIR-FIlter_HLS/blob/main/p
 For the plain Python Implementation a huge performance gain of 3160 times has been achieved. For the comparison with _lfilter()_ from scipy (lib) a performance gain of 6.7 times can be achieved.
 
 [Source Code](https://github.com/Nunigan/FIR-FIlter_HLS)
+
+# Reference
+- [YouTube Guide](https://www.youtube.com/watch?v=arazRaGvJtM&list=PLf4U4tpbjjz7x_bsG3sBEuXgVQPZfWJgW&index=4)

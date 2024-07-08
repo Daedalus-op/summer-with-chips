@@ -14,6 +14,7 @@
 - Official docs
 	- [Quick Start Guide for Zynq™ UltraScale+™ — Vitis™ AI 3.0 documentation](https://xilinx.github.io/Vitis-AI/3.0/html/docs/quickstart/mpsoc.html)
 	- [Vitis Unified Software Platform Overview • Vitis Unified Software Platform Documentation: Embedded Software Development (UG1400) • Reader • AMD Technical Information Portal](https://docs.amd.com/r/en-US/ug1400-vitis-embedded/Vitis-Unified-Software-Platform-Overview)
+	- [HLS Tool Flow](https://www.xilinx.com/video/software/vitis-hls-tool-flow.html)
 	- DPU IP Guides
 		- [Core Overview • DPUCZDX8G for Zynq UltraScale+ MPSoCs Product Guide (PG338) • Reader • AMD Technical Information Portal](https://docs.amd.com/r/en-US/pg338-dpu/Core-Overview)
 		- [DPU IP Core, for the kv260](https://github.com/Xilinx/Vitis-AI/tree/3.0/dpu)
