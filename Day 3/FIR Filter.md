@@ -2,6 +2,7 @@
 ---
 [hackster.io](https://www.hackster.io/michi_michi/fpga-fir-filter-hls-kria-kv260-pynq-2eec35)
 ### Introduction
+This project demonstrates how to implement a Finite Impulse Response (FIR) filter on an FPGA using High-Level Synthesis (HLS) in the Vitis development environment. FIR filters are widely used in digital signal processing applications, such as audio and image processing, to perform tasks like filtering, smoothing, and edge detection
 
 With the [Vitis High-Level Synthesis (HLS)](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/Getting-Started-with-Vitis-HLS) the general development time for FPGAs can be shortened considerably.
 

@@ -10,6 +10,7 @@
 - Youtube
 	- [An Introduction to FPGAs: Architecture, Programmability and Advantageous - YouTube](https://www.youtube.com/watch?v=ahws--oNpBc&list=PLXHMvqUANAFOviU0J8HSp0E91lLJInzX1&index=3)
 	- [Vitis AI (1.4) Pytorch on Kria - YouTube](https://www.youtube.com/watch?v=Ktd-srFyJqE)
+	- [HLS programming course](https://www.youtube.com/watch?v=6Jn8Vj3Hk5Y&list=PLf4U4tpbjjz7x_bsG3sBEuXgVQPZfWJgW)
 - Official docs
 	- [Quick Start Guide for Zynq™ UltraScale+™ — Vitis™ AI 3.0 documentation](https://xilinx.github.io/Vitis-AI/3.0/html/docs/quickstart/mpsoc.html)
 	- [Vitis Unified Software Platform Overview • Vitis Unified Software Platform Documentation: Embedded Software Development (UG1400) • Reader • AMD Technical Information Portal](https://docs.amd.com/r/en-US/ug1400-vitis-embedded/Vitis-Unified-Software-Platform-Overview)
@@ -27,4 +28,3 @@
 #### Projects
 - [Vitis-AI-Tutorials/Tutorials/kv260_lidar_cam_fusion at 2.0 · Xilinx/Vitis-AI-Tutorials](https://github.com/Xilinx/Vitis-AI-Tutorials/tree/2.0/Tutorials/kv260_lidar_cam_fusion/) 
 - [Vitis Custom Embedded Platform Creation Example on KV260 — Vitis™ Tutorials 2022.1 documentation](https://xilinx.github.io/Vitis-Tutorials/2022-1/build/html/docs/Vitis_Platform_Creation/Design_Tutorials/01-Edge-KV260/README.html)
-- [Lidar- Cam fusion of KV260](https://github.com/Xilinx/Vitis-AI-Tutorials/tree/2.0/Tutorials/kv260_lidar_cam_fusion/)
