@@ -1,7 +1,14 @@
-# FIR-Filter
+# Table of Contents
+- [Introduction](#introduction)
+- [What is a FIR Filter](#fir-filters)
+- [Filter Specifications](#filter-specs)
+- [Code](#code)
+- [Results](#results)
+- [Implementation](#implementation)
+- [References](#references)
 ---
-[hackster.io](https://www.hackster.io/michi_michi/fpga-fir-filter-hls-kria-kv260-pynq-2eec35)
-### Introduction
+[Source Code](https://github.com/Nunigan/FIR-FIlter_HLS)
+# Introduction
 This project demonstrates how to implement a Finite Impulse Response (FIR) filter on an FPGA using High-Level Synthesis (HLS) in the Vitis development environment. FIR filters are widely used in digital signal processing applications, such as audio and image processing, to perform tasks like filtering, smoothing, and edge detection
 
 With the [Vitis High-Level Synthesis (HLS)](https://docs.xilinx.com/r/en-US/ug1399-vitis-hls/Getting-Started-with-Vitis-HLS) the general development time for FPGAs can be shortened considerably.
@@ -12,8 +19,7 @@ In a [blog post](https://www.hackster.io/michi_michi/fpga-deep-learning-inferenc
 
 All data and pre-built hardware are in the attached [GitHub repository](https://github.com/Nunigan/FIR-FIlter_HLS)
 
-### Fundamentals
-
+# FIR Filters
 In digital signal processing a Finite Impulse Response (FIR) Filter has a finite response to any given finite input signal. A FIR filter is constructed with a tapped delay line for delaying the input signal by a given number of taps (_N_). The $z^{-1}$ is the delay operator from the [Z-Transformation](https://en.wikipedia.org/wiki/Z-transform)<br>
 ![FIR ref1](../assets/fir_ref1.avif)
 <br>The filter coefficients can be arranged in a impulse response vector.<br>
@@ -25,7 +31,7 @@ In digital signal processing a Finite Impulse Response (FIR) Filter has a finite
 <br>Which is the same as the convolution of the input signal with the impulse response<br>
 ![FIR ref5](../assets/fir_ref5.avif)
 For the filter design the [Scipy Cookbook about the lowpass FIR-filter design with python](https://scipy-cookbook.readthedocs.io/items/FIRFilter.html) was used.
-
+# Filter Specs
 The filter has been designed with a kaiser window with following properties:
 
 - Cutoff-frequency (_f_c_) of 10 Hz
@@ -48,26 +54,8 @@ The cookbook has been adapted for this project in [fir.py](https://github.com/Nu
 
 <p>The final plots shows the original signal (thin blue line), the filtered signal (shifted by the appropriate phase delay to align with the original signal; thin red line), and the "good" part of the filtered signal (heavy green line). The "good part" is the part of the signal that is not affected by the initial conditions.</p>
 
-In the cookbook the scipy function `scipy.signal.lfilter()` is used for filtering a singal. A pure and non optimized python (with NumPy) implementation would look like:
-```python
-def fir (x, h):
-	nsamples = len(x)
-	N = len(h)
-	y = np.zeros(len(x))
-	shift_reg = np.zeros(len(N))
-	
-	for j in range(nsamples):
-		acc = 0
-		for i in range(N-1, 0, -1):
-			shift_reg[i] = shift_reg[i - 1]
-			acc += shift_reg[i] * h[i]
-		acc += x[j] * h[0]
-	
-		shift_reg[0] = x[j]
-		y[j] = acc
-	return y
-```
-
+# Code
+For detailed code explanation refer [here](<./FIR Code Explanation.md>) <br>
 ### High Level Synthesis
 
 For the HLS part we filter a signal with length 1024 with a 74 tap filter. With no parallelism we need about 75k cycles to filter the signal.
@@ -87,7 +75,6 @@ void fir(const float input[], float output[]){
 	static float shift_reg[NUM_TAPS];
 	#pragma HLS ARRAY_PARTITION variable=shift_reg complete dim=0
 	for (int j =0; j < SIZE; j ++ ) {
-		// Architecture type based on performaance, II(Inititiation Interval) 
 		#pragma HLS pipeline II=1
 		
 		float acc = 0;
@@ -136,17 +123,22 @@ As one in the report can see, the overhead is nearly gone and with 1058 cycles r
 
 ![FIR res2](../assets/fir_res2.avif)
 
+# Implementation
 ### Vitis HLS & Vivado
 
 As in the previous blog post, generate the hardware with Vitis HLS and Vivado. For the clock frequency use 100 MHz, it can be overclocked afterwards in Pynq.
+Use the following guides for HLS Tool flow
+	- [HLS Tool Flow Official Overview](https://www.xilinx.com/video/software/vitis-hls-tool-flow.html)
+	- [HLS Tool Flow Youtube](https://www.youtube.com/watch?v=Ib3blx2Us8o&list=PLf4U4tpbjjz7x_bsG3sBEuXgVQPZfWJgW&index=6)
 
 ### Pynq
 
-The pynq code ([fir.ipynb](https://github.com/Nunigan/FIR-FIlter_HLS/blob/main/pynq/fir.ipynb)) is very similar as in the previous blog post. And the system can be overclocked up to 250 MHz
+The PYNQ code ([fir.ipynb](https://github.com/Nunigan/FIR-FIlter_HLS/blob/main/pynq/fir.ipynb)) is very similar as in the previous blog post. And the system can be overclocked up to 250 MHz
 
 For the plain Python Implementation a huge performance gain of 3160 times has been achieved. For the comparison with _lfilter()_ from scipy (lib) a performance gain of 6.7 times can be achieved.
 
-[Source Code](https://github.com/Nunigan/FIR-FIlter_HLS)
 
-# Reference
+# References
 - [YouTube Guide](https://www.youtube.com/watch?v=arazRaGvJtM&list=PLf4U4tpbjjz7x_bsG3sBEuXgVQPZfWJgW&index=4)
+- [hackster.io](https://www.hackster.io/michi_michi/fpga-fir-filter-hls-kria-kv260-pynq-2eec35)
+
