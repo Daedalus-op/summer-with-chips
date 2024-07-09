@@ -3,7 +3,7 @@ All the course materials for summer school by chips
 
 # [Hello FPGAs](<FPGAs vs LEGOs.md>)
 
-# Day 1: 
+# Day 1: [Hello Vivado](https://github.com/santoshkrishna4138/chips_summer_school_day1.git)
 
 # Day 2: [PYNQ](./)
 
