@@ -65,7 +65,7 @@ This is an built in app that displays what the webcam can see and bounds box to 
 [Source](https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/nlp-smartvision/docs/app_deployment_nlp.html)
 
 #### Note:
-\* The Prebuilt apps can be modified according to our needs by following the above linked documentations 
+>* The Prebuilt apps can be modified according to our needs by following the above linked documentations 
 # Advanced Projects \**
 
 ## YOLO Project
@@ -79,4 +79,4 @@ Detailed guide at [Hackster](https://www.hackster.io/hdcoe/running-yolov2-tiny-o
 [Source](https://github.com/Parimala6/Vitis-AI_based_binary_classification)
 
 #### Note:
-\** Are not implemented yet in the current board
+>** Are not implemented yet in the current board

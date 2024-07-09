@@ -5,6 +5,7 @@
 	- [Loop Pipelining](#loop-pipelining)
 	- [Code Hoisting](#code-hoisting)
 	- [Code Unrolling](#code-unrolling)
+	- [Unrolling vs Pipelining](#unrolling-vs-pipelining)
 # Python 
 In the cookbook the scipy function `scipy.signal.lfilter()` is used for filtering a singal. A pure and non optimized python (with NumPy) implementation would look like:
 ```python
@@ -120,6 +121,8 @@ This maps the c array to N registers.
 	shift_acc_loop:
 	for (i = N - 1; i >= 0; i--){
 ```
+
+### Unrolling vs Pipelining
 
 | Unrolling               | Pipelining                   |
 | ----------------------- | ---------------------------- |
