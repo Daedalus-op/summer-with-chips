@@ -127,7 +127,7 @@ As one in the report can see, the overhead is nearly gone and with 1058 cycles r
 ### Vitis HLS & Vivado
 
 As in the previous blog post, generate the hardware with Vitis HLS and Vivado. For the clock frequency use 100 MHz, it can be overclocked afterwards in Pynq.
-Use the following guides for HLS Tool flow
+Use the following guides for HLS Tool flow <br>
 	- [HLS Tool Flow Official Overview](https://www.xilinx.com/video/software/vitis-hls-tool-flow.html)
 	- [HLS Tool Flow Youtube](https://www.youtube.com/watch?v=Ib3blx2Us8o&list=PLf4U4tpbjjz7x_bsG3sBEuXgVQPZfWJgW&index=6)
 
